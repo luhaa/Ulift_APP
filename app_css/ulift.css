@@ -1,0 +1,184 @@
+/*通用样式*/
+body{
+    color:#333;
+    font-size:12px;
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+
+
+
+
+/*start页面的样式*/
+.start_box{
+    width: 100%;
+    height: 100%;
+    background: #111;
+    position: fixed;
+}
+.start_box img{
+    display: block;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top:40%;
+
+}
+
+
+/*广告页样式*/
+.advertise_box .slider-slides .slider-slide img{
+    max-height: 100%;
+
+}
+.advertise_box .slider-pager{
+    top:30px;
+    z-index: 1000;
+}
+.advertise_box .slider-pager .slider-pager-page{
+    color: #ff9095;
+}
+.advertise_box button{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    bottom:50px;
+    background: #218028;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    border:0;
+    border-radius: 10px;
+    z-index: 20000;
+}
+
+/*header页面样式*/
+#u_header{
+    background: #fff;
+}
+#u_header .row{
+    padding: 0;
+    height: 0;
+}
+#u_header .row .col-20 span{
+    display: inline-block;
+    text-align: center;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+}
+#u_header .row .col-20 i{
+    margin-left: 5px;
+}
+#u_header .row .col-80 .item-input{
+    padding: 4px 0 4px 10px;
+    width: 95%;
+    border:0;
+    border-left: 1px solid #ccc;
+}
+#u_header .row .col-80 .item-input input{
+    height: 25px;
+}
+
+/*footer*/
+#u_footer .tabs{
+    background: #d0e6ff;
+    height: 35px;
+    color: #666;
+    border-top:1px solid #ccc;
+
+}
+#u_footer i.icon{
+    font-size: 24px;
+}
+#u_footer a.active{
+    color:#22801a;
+}
+
+/*index*/
+#index_box{
+    background: url(../images/banner01.jpg) no-repeat;
+    background-size: 100% auto;
+    padding: 6px;
+
+}
+/*首页:搜索区域*/
+#index_box section{
+    margin-top:70px ;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#index_box section span{
+    float: left;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+
+}
+#index_box section span i{
+    margin-left: 5px;
+}
+#index_box section button.icon{
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+/*首页:功能区域*/
+#index_box article{
+    border:1px solid #f1f1f1;
+    background: #fff;
+    border-radius: 3px 3px 0 0;
+}
+
+#index_box article .col{
+    text-align: center;
+}
+#index_box article .col a{
+    color: #999;
+}
+#index_box article .col a.active{
+    color: #333;
+}
+
+/*首页:功能图标区域*/
+#index_box .func_box{
+    background: #fff;
+    padding-top: 10px;
+    border:1px solid #f1f1f1;
+    border-top:0;
+}
+#index_box .func_box .col{
+    text-align: center;
+}
+#index_box .func_box .col i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    color:white;
+    background: #2bc181;
+    font-size: 20px;
+}
+#index_box .func_box .col p{
+    font-size: 10px;
+    margin-top: 10px;
+}
+#index_box .func_box .col i.new_house{background: #2bc181;}
+#index_box .func_box .col i.old_house{background: #ffca14;}
+#index_box .func_box .col i.f_house{background: #2a75ff;}
+#index_box .func_box .col i.map_house{background: #d8ff1b;}
+
+
+
+
+
+

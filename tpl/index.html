@@ -1,0 +1,73 @@
+<div ng-include="'tpl/include/header.html'" ng-show="showHeader"></div>
+
+
+<ion-content class="content has-footer"
+             ng-class="showHeader?'has-header':''"
+             on-scroll="getPosition()"> <!--滚动事件 动态加载或不加载header-->
+    <div id="index_box">
+        <!--搜索区域-->
+        <section>
+            <span ng-click="openModal()">{{selectedCity}}<i class="icon ion-arrow-down-b"></i></span>
+            <button class="icon ion-search"></button>
+        </section>
+
+        <!--功能区域-->
+        <article class="row">
+            <div class="col">
+                <a ng-class="currentIndex==1?'active':''" ng-click="changeFunTab(1)" href="">我要买房</a>
+            </div>
+            <div class="col">
+                <a ng-class="currentIndex==2?'active':''"  ng-click="changeFunTab(2)" href="">我要租房</a>
+            </div>
+            <div class="col">
+                <a ng-class="currentIndex==3?'active':''"  ng-click="changeFunTab(3)" href="">我要卖房</a>
+            </div>
+        </article>
+
+        <!--功能图标区域-->
+        <div class="func_box">
+            <div class="row" ng-show="currentIndex==2">
+                <div class="col" ng-click="jump('list')">
+                    <i class="icon ion-android-image new_house"></i>
+                    <p>普通租房</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-home old_house"></i>
+                    <p>二手房</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-android-boat f_house"></i>
+                    <p>海外买房</p>
+                </div>
+                <div class="col">
+                    <i class="icon ion-android-map map_house"></i>
+                    <p>地图找房</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!--显示新闻-->
+        <div class="list">
+
+            <a ng-repeat="news in newsData" class="item item-thumbnail-left" href="#">
+                <img ng-src="{{news.pic}}">
+                <h2>{{news.title}}</h2>
+                <p>{{news.abstract}}</p>
+                <span>{{news.pubTime | date:'yyyy-MM-dd'}}</span>
+            </a>
+
+            <p ng-hide="hasMore">没有更多了</p>
+        </div>
+
+    </div>
+
+
+<!--上拉加载更多-->
+<ion-infinite-scroll ng-if="hasMore" on-infinite="loadMoreNews()">
+
+</ion-infinite-scroll>
+
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

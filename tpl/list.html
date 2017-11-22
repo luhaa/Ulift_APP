@@ -1,0 +1,49 @@
+<div ng-include="'tpl/include/header_list.html'"></div>
+<ion-header-bar class="bar-subheader">
+    <div class="row">
+        <div class="col">区域</div>
+        <div class="col">价格</div>
+        <div class="col">面积</div>
+        <div class="col">上新</div>
+        <div class="col" ng-click="">
+            <button ng-click="changeShowType()" ng-show="showList" class="button button-icon icon ion-ios-list"></button>
+            <button ng-click="changeShowType()" ng-hide="showList" class="button button-icon icon ion-ios-keypad"></button>
+        </div>
+    </div>
+</ion-header-bar>
+
+
+
+<ion-content class="content has-header has-footer">
+
+    <!--显示方式一:用列表形式-->
+    <div class="list" ng-if="showList">
+        list
+        <!--<a class="item item-avatar" ng-repeat="house in houseData" href="#/detail/{{house.zfId}}">
+            <img ng-src="{{house.picList[0].zfPic}}">
+            <h2>{{house.title}}</h2>
+            <p>{{house.houseType}}</p>
+            <span>{{house.pubTime | date:'yyyy-MM-dd'}}</span>
+        </a>-->
+    </div>
+
+    <!--显示方式二:用grid形式-->
+    <div ng-if="!showList">
+
+        grid
+        <!--<div class="row" ng-click="houseList in houseArray track by $index"> &lt;!&ndash;行循环&ndash;&gt;
+            <div ng-click="house in houseList track by $index" class="col">&lt;!&ndash;列循环&ndash;&gt;
+                <img ng-src="{{house.picList[0].zfPic}}">
+                <h2>{{house.title}}</h2>
+                <p>{{house.houseType}}</p>
+                <span>{{house.pubTime | date:'yyyy-MM-dd'}}</span>
+
+            </div>-->
+        </div>
+    </div>
+
+</ion-content>
+
+
+
+<div ng-include="'tpl/include/footer.html'"></div>
